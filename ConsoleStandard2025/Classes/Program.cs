@@ -1,7 +1,8 @@
-﻿using System.Runtime.CompilerServices;
-using ConsoleConfigurationLibrary.Classes;
+﻿using ConsoleConfigurationLibrary.Classes;
 using ConsoleStandard2025.Classes;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using static ConsoleConfigurationLibrary.Classes.ApplicationConfiguration;
 
 // ReSharper disable once CheckNamespace
@@ -11,8 +12,11 @@ internal partial class Program
     [ModuleInitializer]
     public static void Init()
     {
-        AnsiConsole.MarkupLine("");
-        Console.Title = "Code sample";
+        var assembly = Assembly.GetEntryAssembly();
+        var product = assembly?.GetCustomAttribute<AssemblyProductAttribute>()?.Product;
+
+        Console.Title = product!;
+
         WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
 
         SetupLogging.Development();

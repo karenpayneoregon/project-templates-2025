@@ -7,13 +7,17 @@
 		<Nullable>disable</Nullable>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<Product>Template</Product>
+	</PropertyGroup>
+
 	<ItemGroup>
-	  <None Remove="readme.md" />
+		<None Remove="readme.md" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="assets\csharp.ico" />
-	  <Content Include="readme.md" />
+		<Content Include="assets\csharp.ico" />
+		<Content Include="readme.md" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -25,14 +29,14 @@
 		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.2" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<!-- ReSharper disable once VulnerablePackage -->
+	<!--<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.7" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
-	</ItemGroup>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.0" />
+		<PackageReference Include="Dapper" Version="2.1.66" />
+	</ItemGroup>-->
 
 	<ItemGroup>
 		<PackageReference Include="Spectre.Console" Version="0.50.0" />
@@ -47,9 +51,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="appsettings.json">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </None>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 
 </Project>

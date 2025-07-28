@@ -9,7 +9,7 @@ public static class SpectreConsoleHelpers
     {
         Console.WriteLine();
 
-        Render(new Rule($"[yellow]Press[/] [cyan]ENTER[/] [yellow]to exit the demo[/]")
+        Render(new Rule($"[yellow]Press[/] [cyan]ENTER[/] [yellow]to exit[/]")
             .RuleStyle(Style.Parse("silver")).LeftJustified());
 
         Console.ReadLine();
