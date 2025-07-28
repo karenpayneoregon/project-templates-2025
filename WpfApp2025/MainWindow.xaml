@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp2025.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WpfApp2025.ViewModels"
+        xmlns:local="clr-namespace:WpfApp2025"
+        mc:Ignorable="d"
+        Background="#F5F5F5"
+        Title="Main" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Button Width="100" Height="35"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="0,0,15,15"
+                Command="{Binding ExitCommand}">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Exit" Margin="5,0" />
+                <Image Source="pack://application:,,,/Assets/exit.png"
+                       Width="16" Height="16"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>

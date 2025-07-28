@@ -1,0 +1,78 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+
+<div class="container-md">
+    
+    <H1 class="fs-3 text-center fw-bold">Header</H1>
+
+    <div class="row">
+
+        <div class="col">
+
+            <div class="card shadow rounded-1">
+                <div class="card-body bg-light">
+                    <div class="text-center fw-bold">Content</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12">
+
+   
+            <div class="float-end">
+                <div class="form-check form-switch form-control-lg">
+                    <input class="form-check-input" type="checkbox" id="toggleSidebar" asp-for="IsChecked">
+                    <label class="form-check-label" for="toggleSidebar">Page help</label>
+                </div>
+            </div>
+ 
+
+        </div>
+
+    </div>
+
+    <form method="post">
+        @* off-canvas *@
+
+        @{
+            await Html.RenderPartialAsync("IndexPartial");
+        }
+
+    </form>
+
+</div>
+
+@* code for toggle *@
+@section scripts {
+
+    <script src="js/sidebar.js"></script>
+
+    <script>
+
+        var leftSideOffCanvas = document.getElementById("offcanvasMain1");
+        var aboutButton = document.getElementById("aboutButton");
+        var link = document.getElementById('skipper');
+        leftSideOffCanvas.addEventListener("hidden.bs.offcanvas", function (e) {
+            console.log(e);
+            link.style.display = 'none';
+            aboutButton.focus();
+        });
+    </script>
+}
+
+

@@ -1,0 +1,26 @@
+<VSTemplate Version="3.0.0"  Type="ProjectGroup"
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Logging and Configuration projects</Name>
+        <Description>For Serilog setup, EF Core logger and reading values from appsettings.json.</Description>
+		<ProjectType>CSharp</ProjectType>
+
+		<!--<EnableLocationBrowseButton>true</EnableLocationBrowseButton>-->
+		<LocationField>Disabled</LocationField>
+		<Icon>Two.ico</Icon>
+    </TemplateData>
+    <TemplateContent>
+	    <ProjectCollection>
+		    <SolutionFolder Name="Logging Classes">
+			    <ProjectTemplateLink ProjectName="LoggerLibrary" CopyParameters="true">
+				    LoggerLibrary\MyTemplate.vstemplate
+			    </ProjectTemplateLink>
+		    </SolutionFolder>
+		    <SolutionFolder Name="Appsettings Classes">
+			    <ProjectTemplateLink ProjectName="ApplicationSetupLibrary" CopyParameters="true">
+				    ApplicationSetupLibrary\MyTemplate.vstemplate
+			    </ProjectTemplateLink>
+		    </SolutionFolder>
+	    </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>

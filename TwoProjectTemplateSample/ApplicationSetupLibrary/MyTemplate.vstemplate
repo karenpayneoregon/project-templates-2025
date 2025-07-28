@@ -1,0 +1,24 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>ApplicationSetupLibrary</Name>
+    <Description>For reading appsettings.json values</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ApplicationSetupLibrary</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ApplicationSetupLibrary.csproj" File="ApplicationSetupLibrary.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Configuration.cs">Configuration.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ConfigurationHelpers.cs">ConfigurationHelpers.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Helpers.cs">Helpers.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
