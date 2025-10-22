@@ -4,6 +4,9 @@ using System.Runtime.CompilerServices;
 namespace BasicConsoleProject.Classes.Configuration;
 public static class SpectreConsoleHelpers
 {
+    /// <summary>
+    /// Displays a prompt to the user indicating that they can press any key to exit the application.
+    /// </summary>
     public static void ExitPrompt()
     {
         Console.WriteLine();
@@ -18,6 +21,11 @@ public static class SpectreConsoleHelpers
         AnsiConsole.WriteLine();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="methodName"></param>
+    /// <param name="filePath"></param>
     public static void PrintCyan([CallerMemberName] string? methodName = null, [CallerFilePath] string filePath = "")
     {
         AnsiConsole.MarkupLine($"[cyan]{Path.GetFileNameWithoutExtension(filePath)}.{methodName}[/]");
