@@ -2,6 +2,13 @@
 
 The template are to give developers an idea how to use custom project templates in Visual Studio 2022 rather than sstandard project templates.
 
+## Export folder
+
+C:\Users\\`username`\\Documents\Visual Studio 2022\My Exported Templates
+
+- Replace `username` with your Windows user name.
+- Replace `Visual Studio 2022` with the appropriate version.
+
 ## Two project template
 
 See folder `TwoProjectTemplateSample` for a sample project template that creates two projects in a solution.
