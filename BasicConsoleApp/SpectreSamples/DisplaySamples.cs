@@ -3,6 +3,8 @@ using System.Globalization;
 // required for PrintCyan
 using BasicConsoleApp.Classes.Utility;
 using Spectre.Console;
+using Spectre.Console.Rendering;
+using SpectreConsoleLibrary;
 
 namespace BasicConsoleApp.SpectreSamples;
 
@@ -43,7 +45,7 @@ internal class DisplaySamples
     /// <remarks>
     /// This method creates a table with two columns: "Index" and "Name". It populates the table
     /// with the indices and names of months retrieved from the current culture's month names.
-    /// The table is then displayed in the console using <see cref="Spectre.Console.AnsiConsole.Write(Spectre.Console.IRenderable)"/>.
+    /// The table is then displayed in the console using <see cref="Spectre.Console.AnsiConsole.Write(IRenderable)"/>.
     /// </remarks>
     public static void TableExample()
     {

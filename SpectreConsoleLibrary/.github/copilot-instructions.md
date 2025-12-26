@@ -1,48 +1,41 @@
-# Copilot Instructions for SpectreConsoleLibrary
+# Copilot Instructions — SpectreConsoleLibrary
 
-## Project Overview
-- **Purpose:** Utility library for Spectre.Console, providing helper methods for console rendering and formatting.
-- **Main Components:**
-  - `Helpers.cs`: Contains static helper methods for rendering rules, printing method names, line separators, and escaping/removing Spectre.Console markup.
-  - `SpectreConsoleLibrary.csproj`: .NET 9.0 project file, references Spectre.Console v0.46.0.
+Purpose
+- Small utility library providing Spectre.Console helper methods and string extensions for markup handling.
 
-## Architecture & Patterns
-- All logic is in static methods within `Helpers.cs` under the `SpectreConsoleLibrary` namespace.
-- Methods use Spectre.Console's `AnsiConsole`, `Markup`, and `Rule` for output formatting.
-- Extension methods (`ConsoleEscape`, `ConsoleRemove`) are used for string markup handling.
-- Follows .NET conventions for static utility libraries.
+Quick Start (developer)
+- Build: `dotnet build` (project targets `net9.0` — ensure .NET 9 SDK is installed)
+- Run sample/debug: open the project in Visual Studio 2022 or use `dotnet run` from a test/host project that references this library.
 
-## Developer Workflows
-- **Build:**
-  - Use Visual Studio 2022 or run `dotnet build` from the project root.
-  - Target framework: `net9.0` (ensure .NET 9 SDK is installed).
-- **Dependencies:**
-  - Spectre.Console is referenced via NuGet in the `.csproj`.
-- **Debug/Test:**
-  - No test files or test projects present; add tests in a separate project if needed.
-  - Debug using standard Visual Studio or `dotnet run` workflows.
+Key Files
+- `Helpers.cs` — central place for console helpers and extension methods (escape/remove markup, separators, styled printing).
+- `SpectreConsoleLibrary.csproj` — target framework and NuGet references (Spectre.Console dependency).
 
-## Project-Specific Conventions
-- Markup escaping and removal are handled via extension methods on `string`.
-- Console output is styled using Spectre.Console markup and rules for clarity and separation.
-- Method names are printed in cyan for demo/diagnostic purposes (`PrintCyan`).
-- Exit prompts and separators use custom styles (`silver`, `grey`).
+Patterns & Conventions (discoverable)
+- Helpers are implemented as static methods in `Helpers.cs` inside the `SpectreConsoleLibrary` namespace.
+- String markup handling is exposed via extension methods (e.g., `ConsoleEscape()`, `ConsoleRemove()`) — prefer using these when preparing text for Spectre.Console output.
+- Console output uses Spectre.Console markup and `AnsiConsole`/`Rule` objects for consistent separators and styles.
 
-## Integration Points
-- Only external dependency is Spectre.Console.
-- No cross-component communication; all logic is local to the library.
-
-## Key Files
-- `Helpers.cs`: All helper logic and patterns.
-- `SpectreConsoleLibrary.csproj`: Project configuration and dependencies.
-
-## Example Usage
-```csharp
-Helpers.PrintCyan(); // Prints the calling method name in cyan
-Helpers.LineSeparator(); // Prints a styled separator
-"Children[0].Name".ConsoleEscape(); // Escapes Spectre.Console markup
-"[cyan]Hello[/]".ConsoleRemove(); // Removes Spectre.Console markup
+Examples (from codebase patterns)
+```
+Helpers.PrintCyan();         // prints caller/method name in cyan for quick diagnostics
+Helpers.LineSeparator();      // prints a styled rule/separator via Spectre.Console
+"[cyan]Hello[/]".ConsoleRemove(); // remove Spectre markup from a string
+"Children[0].Name".ConsoleEscape(); // escape characters to avoid Spectre markup parsing
 ```
 
----
-_If any conventions or workflows are unclear, please provide feedback so this guide can be improved._
+Developer Notes for Agents
+- Preserve method naming and extension patterns when adding helpers to keep API consistent.
+- Avoid adding runtime dependencies beyond Spectre.Console unless necessary; this project is intentionally small and dependency-light.
+- No test project present — if you add tests, create a separate `tests` project and reference this library.
+
+Build & Debug Tips
+- Use `dotnet build` and IDE debug in Visual Studio 2022 for interactive inspection.
+- If packing/publishing is needed, add a consumer project (console app) to exercise runtime behavior; current repo is a library template.
+
+Where to Look Next
+- `Helpers.cs` for canonical helper implementations.
+- `SpectreConsoleLibrary.csproj` for package/version constraints.
+
+Feedback
+- If anything here is incorrect or you'd like more examples or a tiny runnable demo project added, tell me and I'll update the file.

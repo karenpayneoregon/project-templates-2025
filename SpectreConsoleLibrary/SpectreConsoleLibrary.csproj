@@ -4,17 +4,42 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<Description>Spectre.Console Library</Description>
+		<Copyright>Karen Payne</Copyright>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageTags>csharp;spectre.console</PackageTags>
+		<PackageReleaseNotes>Add Vehicle generator</PackageReleaseNotes>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>Spectre.Console Library</Title>
+		<RepositoryUrl>https://github.com/karenpayneoregon/project-templates-2025</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/karenpayneoregon/project-templates-2025/tree/master/SpectreConsoleLibrary</PackageProjectUrl>
+		<Version>1.0.0</Version>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <None Remove="readme.md" />
-	</ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <NoWarn>1701;1702;CS8604</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <NoWarn>1701;1702;CS8604</NoWarn>
+	</PropertyGroup>
 
 	<ItemGroup>
 	  <Content Include="readme.md" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Spectre.Console" Version="0.46.0" />
+		<PackageReference Include="Spectre.Console" Version="0.54.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="LICENSE.txt">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="readme.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>

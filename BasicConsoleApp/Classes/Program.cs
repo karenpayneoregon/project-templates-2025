@@ -1,6 +1,6 @@
-﻿using ConsoleHelperLibrary.Classes;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
+using SpectreConsoleLibrary;
 
 // ReSharper disable once CheckNamespace
 namespace BasicConsoleApp;
@@ -17,6 +17,8 @@ internal partial class Program
         var product = assembly?.GetCustomAttribute<AssemblyProductAttribute>()?.Product;
 
         Console.Title = product!;
+
+        SpectreConsoleHelpers.SetEncoding();
 
         //WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
 
