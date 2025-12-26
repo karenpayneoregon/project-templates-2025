@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
-using SpectreConsoleLibrary;
+using SpectreConsoleLibrary2025;
 
 // ReSharper disable once CheckNamespace
 namespace BasicConsoleApp;

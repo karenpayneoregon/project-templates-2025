@@ -1,4 +1,4 @@
-﻿namespace SpectreConsoleLibrary;
+﻿namespace SpectreConsoleLibrary2025;
 /// <summary>
 /// Represents the type of pill-shaped UI element, determining its visual style and color scheme.
 /// </summary>

@@ -4,7 +4,7 @@ using System.Globalization;
 using BasicConsoleApp.Classes.Utility;
 using Spectre.Console;
 using Spectre.Console.Rendering;
-using SpectreConsoleLibrary;
+using SpectreConsoleLibrary2025;
 
 namespace BasicConsoleApp.SpectreSamples;
 

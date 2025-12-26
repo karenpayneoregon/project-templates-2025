@@ -55,6 +55,6 @@
 
 
 	<ItemGroup>
-	  <ProjectReference Include="..\SpectreConsoleLibrary\SpectreConsoleLibrary.csproj" />
+	  <ProjectReference Include="..\SpectreConsoleLibrary\SpectreConsoleLibrary2025.csproj" />
 	</ItemGroup>
 </Project>

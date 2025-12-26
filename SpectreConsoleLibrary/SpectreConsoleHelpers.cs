@@ -1,8 +1,8 @@
-﻿using Spectre.Console;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 using System.Text;
+using Spectre.Console;
 
-namespace SpectreConsoleLibrary;
+namespace SpectreConsoleLibrary2025;
 
 public static class SpectreConsoleHelpers
 {

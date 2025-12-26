@@ -1,5 +1,5 @@
 ﻿
-namespace SpectreConsoleLibrary;
+namespace SpectreConsoleLibrary2025;
 
 /// <summary>
 /// Provides utility methods for working with file paths and project structures.

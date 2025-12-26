@@ -33,7 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readme.md = readme.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpectreConsoleLibrary", "SpectreConsoleLibrary\SpectreConsoleLibrary.csproj", "{50544C8F-967B-4A0C-9AD8-09190A8D3BBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpectreConsoleLibrary2025", "SpectreConsoleLibrary\SpectreConsoleLibrary2025.csproj", "{50544C8F-967B-4A0C-9AD8-09190A8D3BBB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{7A1224A0-F22D-34FF-DE0A-A058FAFFD90C}"
 EndProject

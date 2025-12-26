@@ -1,7 +1,7 @@
 ﻿// for samples
 using Spectre.Console;
-using SpectreConsoleLibrary;
 using System.Reflection.Emit;
+using SpectreConsoleLibrary2025;
 
 namespace BasicConsoleApp;
 internal partial class Program
