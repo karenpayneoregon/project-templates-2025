@@ -1,6 +1,11 @@
 ﻿# About
 
-Provides various methods for Spectre.Console listed below
+Provides various methods for Spectre.Console listed below.
+
+:small_orange_diamond: If pills may need to use `SpectreConsoleHelpers.SetEncoding();` at start of a project to ensure proper UTF-8 encoding.
+
+- Uses NET 9.0
+- Spectre.Console library version 0.54.0
 
 ## Pills
 
