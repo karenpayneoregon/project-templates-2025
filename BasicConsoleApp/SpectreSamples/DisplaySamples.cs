@@ -65,4 +65,21 @@ internal class DisplaySamples
 
         AnsiConsole.Write(table);
     }
+
+    /// <summary>
+    /// Demonstrates the usage of various pill-shaped UI elements in the console, 
+    /// including error, warning, informational, and success messages.
+    /// </summary>
+    /// <remarks>
+    /// This method utilizes the <see cref="SpectreConsoleHelpers"/> class to render 
+    /// visually distinct pill elements with different styles and alignments.
+    /// </remarks>
+    public static void PillExamples()
+    {
+        SpectreConsoleHelpers.WindowTitle(Justify.Left);
+        SpectreConsoleHelpers.ErrorPill(Justify.Left, "Error: Something went wrong");
+        SpectreConsoleHelpers.WarningPill(Justify.Left, "Potential issue detected");
+        SpectreConsoleHelpers.InfoPill(Justify.Left, "Time to backup data");
+        SpectreConsoleHelpers.SuccessPill(Justify.Left, "Operation completed successfully");
+    }
 }

@@ -8,12 +8,7 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-        
-        SpectreConsoleHelpers.WindowTitle(Justify.Left);
-        SpectreConsoleHelpers.ErrorPill(Justify.Left, "Error: Something went wrong");
-        SpectreConsoleHelpers.WarningPill(Justify.Left, "Potential issue detected");
-        SpectreConsoleHelpers.InfoPill(Justify.Left, "Time to backup data");
-        SpectreConsoleHelpers.SuccessPill(Justify.Left, "Operation completed successfully");
+        // see BasicConsoleApp.SpectreSamples\DisplaySamples class for more examples
         SpectreConsoleHelpers.ExitPrompt(Justify.Left);
     }
 }
