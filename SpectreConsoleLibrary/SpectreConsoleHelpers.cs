@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Text;
 using Spectre.Console;
+using Spectre.Console.Json;
 
 namespace SpectreConsoleLibrary2025;
 
@@ -158,6 +159,35 @@ public static class SpectreConsoleHelpers
     }
 
     /// <summary>
+    /// Writes a JSON string to the console with syntax highlighting using Spectre.Console.
+    /// </summary>
+    /// <param name="json">The JSON string to be displayed in the console.</param>
+    /// <remarks>
+    /// This method uses the <see cref="JsonText"/> class to render the JSON string with customizable
+    /// colors for braces, brackets, colons, commas, strings, numbers, booleans, members, and null values.
+    ///
+    /// Using this method keeps output colors consistent across different JSON outputs.
+    /// </remarks>
+    public static void WriteJson(string json)
+    {
+
+        var jsonText = new JsonText(json)
+                .BracesColor(Color.Red)
+                .BracketColor(Color.Green)
+                .ColonColor(Color.White)
+                .CommaColor(Color.Cyan1)
+                //.StringColor(Color.White)
+                .StringStyle(new Style(Color.White, decoration: Decoration.Italic))
+                .NumberColor(Color.White)
+                .BooleanColor(Color.Red)
+                .MemberColor(Color.Yellow)
+                .NullColor(Color.Green);
+
+        AnsiConsole.Write(jsonText);
+        
+    }
+
+    /// <summary>
     /// Configures the console's input and output encoding to use UTF-8.
     /// </summary>
     /// <remarks>
@@ -198,6 +228,30 @@ public static class SpectreConsoleHelpers
                                $"{fileName}[/][yellow bold].[/][hotpink2]{methodName}[/]");
 
         Console.WriteLine();
+    }
+
+    /// <summary>
+    /// Displays a styled panel in the console with a specified header and message.
+    /// </summary>
+    /// <param name="header">
+    /// The text to display as the panel's header. This is styled with a yellow color.
+    /// </param>
+    /// <param name="message">
+    /// The content to display inside the panel.
+    /// </param>
+    /// <remarks>
+    /// The panel is rendered with a rounded border, custom padding, and a Cornsilk1 border color.
+    /// The panel is centered within the console using Spectre.Console.
+    /// </remarks>
+    public static void PanelDisplay(string header, string message)
+    {
+        var panel = new Panel($"{message}")
+            .Header($"[yellow]{header}[/]", Justify.Center)
+            .RoundedBorder()
+            .Padding(1, 1)
+            .BorderColor(Color.Cornsilk1);
+
+        AnsiConsole.Write(Align.Center(panel));
     }
 
     /// <summary>

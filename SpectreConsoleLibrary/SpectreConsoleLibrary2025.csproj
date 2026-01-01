@@ -8,13 +8,13 @@
 		<Copyright>Karen Payne</Copyright>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
 		<PackageTags>csharp;spectre.console</PackageTags>
-		<PackageReleaseNotes>Initial release</PackageReleaseNotes>
+		<PackageReleaseNotes>Add several new methods and updated documentation</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>Spectre.Console Library 2025</Title>
 		<RepositoryUrl>https://github.com/karenpayneoregon/project-templates-2025</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/karenpayneoregon/project-templates-2025/tree/master/SpectreConsoleLibrary</PackageProjectUrl>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<PackageIcon>LibIcon.png</PackageIcon>
 	</PropertyGroup>
 
@@ -31,6 +31,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Spectre.Console" Version="0.54.0" />
+		<PackageReference Include="Spectre.Console.Json" Version="0.54.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="LibIcon.png">

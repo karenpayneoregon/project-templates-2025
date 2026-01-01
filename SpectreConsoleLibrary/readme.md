@@ -53,3 +53,13 @@ Provides various methods for Spectre.Console listed below.
 |:-----------------|:------------|
 | ConsoleEscape(this string sender) | Escapes Spectre.Console markup characters in a string. |
 | ConsoleRemove(this string sender) | Removes Spectre.Console markup from a string. |
+| PanelDisplay(string content, string title = "", Justify alignment = Justify.Center) | Displays content within a styled Spectre.Console panel with title and alignment. |
+
+
+## JSON Utilities
+
+| Method Signature | Description |
+|:-----------------|:------------|
+| WriteJson(string json) | Writes a JSON string to the console with common syntax highlighting. |
+
+---
