@@ -1,20 +1,27 @@
-﻿// for samples
-using Spectre.Console;
-using System.Reflection.Emit;
-using SpectreConsoleLibrary2025;
+﻿
 
 namespace BasicConsoleApp;
 internal partial class Program
 {
     private static void Main(string[] args)
     {
-        //SpectreConsoleHelpers.WriteJson(Data());
 
-        SpectreConsoleHelpers.PanelDisplay(" [yellow]Code sample[/] ", "This project is for demonstrating [b]SpectreConsoleLibrary2025[/]");
+        SCL.PanelDisplay(" :information:  [yellow]Code sample[/] ", "This project is for demonstrating [b]SpectreConsoleLibrary2025[/]");
+        Console.ReadLine();
+
+        try
+        {
+            File.ReadAllLines("doesNotExists.txt");
+        }
+        catch (Exception ex)
+        {
+            AnsiConsole.WriteException(ex, SCL.ExceptionSettingsStyle);
+        }
+
         // see BasicConsoleApp.SpectreSamples\DisplaySamples class for more examples
-        SpectreConsoleHelpers.ExitPrompt(Justify.Left);
+        SCL.ExitPrompt(Justify.Left);
     }
-    
+
     private static string Data()
     {
         return """

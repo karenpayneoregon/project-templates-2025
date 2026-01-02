@@ -2,7 +2,6 @@
 using System.Globalization;
 // required for PrintCyan
 using BasicConsoleApp.Classes.Utility;
-using Spectre.Console;
 using Spectre.Console.Rendering;
 using SpectreConsoleLibrary2025;
 

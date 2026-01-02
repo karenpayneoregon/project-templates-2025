@@ -1,6 +1,4 @@
-﻿using Spectre.Console;
-
-namespace BasicConsoleApp.Classes.Utility;
+﻿namespace BasicConsoleApp.Classes.Utility;
 
 /// <summary>
 /// Provides utility methods for prompting user input in the console application.

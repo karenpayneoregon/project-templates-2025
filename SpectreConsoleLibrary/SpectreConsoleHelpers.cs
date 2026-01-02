@@ -255,6 +255,38 @@ public static class SpectreConsoleHelpers
     }
 
     /// <summary>
+    /// Gets the exception settings style used for rendering exceptions in the console.
+    /// </summary>
+    /// <value>
+    /// An <see cref="ExceptionSettings"/> object that defines the formatting and styling
+    /// for exceptions, including colors for exception details such as the message, method,
+    /// path, and line number.
+    /// </value>
+    /// <remarks>
+    /// This property is used to customize the appearance of exceptions displayed in the console
+    /// using Spectre.Console. It applies specific styles to various exception components, such as:
+    /// <list type="bullet">
+    /// <item><description><see cref="ExceptionStyle.Exception"/>: Styled in grey.</description></item>
+    /// <item><description><see cref="ExceptionStyle.Message"/>: Styled in white.</description></item>
+    /// <item><description><see cref="ExceptionStyle.Method"/>: Styled in red.</description></item>
+    /// <item><description><see cref="ExceptionStyle.Path"/>: Styled in yellow.</description></item>
+    /// <item><description><see cref="ExceptionStyle.LineNumber"/>: Styled in pink.</description></item>
+    /// </list>
+    /// </remarks>
+    public static ExceptionSettings ExceptionSettingsStyle => new ExceptionSettings
+    {
+        Format = ExceptionFormats.ShortenEverything,
+        Style = new ExceptionStyle
+        {
+            Exception = new Style(Color.Grey),
+            Message = new Style(Color.White),
+            Method = new Style(Color.Red),
+            Path = new Style(Color.Yellow),
+            LineNumber = new Style(Color.Pink1),
+        }
+    };
+
+    /// <summary>
     /// Spectre.Console  Add [ to [ and ] to ] so Children[0].Name changes to Children[[0]].Name
     /// </summary>
     /// <param name="sender"></param>

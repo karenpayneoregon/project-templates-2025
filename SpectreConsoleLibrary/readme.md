@@ -38,6 +38,14 @@ Provides various methods for Spectre.Console listed below.
 
 ---
 
+## ExceptionSettings Style
+
+| Method Signature | Description |
+|:-----------------|:------------|
+| ExceptionSettingsStyle | Defines styles used with `AnsiConsole.WriteException` |
+
+---
+
 ## Diagnostics & Caller Info
 
 | Method Signature | Description |
@@ -63,3 +71,17 @@ Provides various methods for Spectre.Console listed below.
 | WriteJson(string json) | Writes a JSON string to the console with common syntax highlighting. |
 
 ---
+
+## Project aliases
+
+| Alias | Description |
+|:------|:------------|
+| SCL   | Defines a global using directive that creates an alias for the class `SpectreConsoleHelpers` within the namespace `SpectreConsoleLibrary2025` which allows easier access to its methods. |
+
+:bulb: Add the following to your project file (`.csproj`) to enable the alias:
+
+```xml
+<ItemGroup>
+    <Using Include="SpectreConsoleLibrary2025.SpectreConsoleHelpers" Alias="SCL" />
+</ItemGroup>
+```

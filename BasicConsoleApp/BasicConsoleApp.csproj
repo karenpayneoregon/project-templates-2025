@@ -35,12 +35,16 @@
 
 	<ItemGroup>
 		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.2" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Spectre.Console" Version="0.54.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="SpectreConsoleLibrary2025" Version="1.0.2" />
+	</ItemGroup>
+
+    <ItemGroup>
+        <Using Include="SpectreConsoleLibrary2025.SpectreConsoleHelpers" Alias="SCL" />
+    </ItemGroup>
 
 	<ItemGroup>
 	  <None Update="appsettings.json">
@@ -54,7 +58,12 @@
 	</ItemGroup>
 
 
-	<ItemGroup>
+	<!--<ItemGroup>
 	  <ProjectReference Include="..\SpectreConsoleLibrary\SpectreConsoleLibrary2025.csproj" />
 	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="SpectreConsoleLibrary2025\SpectreConsoleHelpers" Alias="SCH" />
+	</ItemGroup>-->
+
 </Project>
