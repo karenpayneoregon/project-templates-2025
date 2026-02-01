@@ -5,9 +5,7 @@ using System.Runtime.CompilerServices;
 using ConsoleHelperLibrary.Classes;
 
 using static ConsoleConfigurationLibrary.Classes.ApplicationConfiguration;
-
 using KP_Console2025.Classes.Configuration;
-using KP_Console2025.Classes.Core;
 
 // ReSharper disable once CheckNamespace
 namespace KP_Console2025;
@@ -23,20 +21,16 @@ internal partial class Program
 
         WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
 
+        SetupLogging.Development();
         Setup();
 
     }
     private static void Setup()
     {
-
-        SetupLogging.Development();
-
         var services = ConfigureServices();
         using var provider = services.BuildServiceProvider();
         var setup = provider.GetService<SetupServices>();
         setup.GetConnectionStrings();
         setup.GetEntitySettings();
-
-        SpectreConsoleHelpers.SetEncoding();
     }
 }

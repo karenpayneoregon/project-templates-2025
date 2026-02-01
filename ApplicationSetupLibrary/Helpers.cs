@@ -81,13 +81,14 @@ namespace ApplicationSetupLibrary
         /// var timeoutValue = GetSetting&lt;int&gt;("ConnectionSettings", "Timeout");
         /// </code>
         /// </example>
-        public static T GetSetting<T>(string section, string name)
+        public static T? GetSetting<T>(string section, string name)
         {
-            if (string.IsNullOrWhiteSpace(name)) return default(T);
+            if (string.IsNullOrWhiteSpace(name)) return default(T)!;
 
             try
             {
-                return JsonRoot().GetSection(section).GetValue<T>(name);
+                return JsonRoot().GetSection(section)
+                    .GetValue<T>(name);
             }
             catch
             {

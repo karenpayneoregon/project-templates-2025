@@ -1,16 +1,14 @@
 ﻿using ConsoleConfigurationLibrary.Classes;
+using ConsoleHelperLibrary.Classes;
+using KP_Console20251.Classes.Configuration;
+using KP_Console20251.Classes.Core;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using ConsoleHelperLibrary.Classes;
-
 using static ConsoleConfigurationLibrary.Classes.ApplicationConfiguration;
 
-using KP_Console2025.Classes.Configuration;
-using KP_Console2025.Classes.Core;
-
 // ReSharper disable once CheckNamespace
-namespace KP_Console2025;
+namespace KP_Console20251;
 internal partial class Program
 {
     [ModuleInitializer]
