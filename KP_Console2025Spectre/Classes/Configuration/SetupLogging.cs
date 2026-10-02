@@ -1,7 +1,7 @@
 ﻿using Serilog;
 using static System.DateTime;
 
-namespace KP_Console2025.Classes.Configuration;
+namespace KP_Console2025Spectre.Classes.Configuration;
 internal class SetupLogging
 {
     public static void Development()

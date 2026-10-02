@@ -6,6 +6,7 @@ using ConsoleHelperLibrary.Classes;
 
 using static ConsoleConfigurationLibrary.Classes.ApplicationConfiguration;
 using KP_Console2025.Classes.Configuration;
+using KP_Console2025Spectre.Classes.Configuration;
 
 // ReSharper disable once CheckNamespace
 namespace KP_Console2025;
