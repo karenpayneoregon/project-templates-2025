@@ -14,7 +14,7 @@
 		<Title>Spectre.Console Library 2025</Title>
 		<RepositoryUrl>https://github.com/karenpayneoregon/project-templates-2025</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/karenpayneoregon/project-templates-2025/tree/master/SpectreConsoleLibrary</PackageProjectUrl>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<PackageIcon>LibIcon.png</PackageIcon>
 	</PropertyGroup>
 
